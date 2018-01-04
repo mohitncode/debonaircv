@@ -38,6 +38,11 @@
 % Other Tweaks
 % -----------------------------------------------------------
 
+% Reduce vertical space between list items to conserve space
+\RequirePackage{enumitem}
+\setlist[itemize]{noitemsep}
+
+% Add document metadata
 \RequirePackage{hyperref}
 \hypersetup{
   pdfauthor={Mohit Delhiwala},
@@ -58,5 +63,7 @@
 }
 
 \newcommand{\Email}[1]{
-  \indent \color{LinkColor} \href{mailto:#1}{#1}
+  {
+    \color{LinkColor} \href{mailto:#1}{#1}
+  }
 }
