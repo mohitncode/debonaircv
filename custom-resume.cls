@@ -23,6 +23,8 @@
 \newfontfamily\bodyfont{Roboto-Regular}[Path=fonts/]
 \newfontfamily\headerfont{Roboto-Thin}[Path=fonts/]
 
+\setmainfont{Roboto-Regular}[Path=fonts/]
+
 % -----------------------------------------------------------
 % Colors
 % -----------------------------------------------------------
@@ -30,11 +32,31 @@
 \RequirePackage{xcolor}
 
 \definecolor{HeadingColor}{HTML}{DE472F}
+\definecolor{LinkColor}{HTML}{D45327}
+
+% -----------------------------------------------------------
+% Other Tweaks
+% -----------------------------------------------------------
+
+\RequirePackage{hyperref}
+\hypersetup{
+  pdfauthor={Mohit Delhiwala},
+  pdfcreator={Mohit Delhiwala},
+  pdfproducer={Mohit Delhiwala},
+  pdfkeywords={resume, template, custom},
+  colorlinks=true
+}
 
 % -----------------------------------------------------------
 % Template Commands
 % -----------------------------------------------------------
 
 \newcommand{\NameHeader}[1]{
-  \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1
+  {
+    \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1 \\
+  }
+}
+
+\newcommand{\Email}[1]{
+  \indent \color{LinkColor} \href{mailto:#1}{#1}
 }
