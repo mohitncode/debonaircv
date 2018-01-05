@@ -56,6 +56,9 @@
   colorlinks=true
 }
 
+% Disable page numbering
+\pagenumbering{gobble}
+
 % -----------------------------------------------------------
 % Template Commands
 % -----------------------------------------------------------
@@ -63,7 +66,10 @@
 \newcommand{\vsep}{\hspace*{0.3em} | \hspace*{1.0em}}
 
 \newcommand{\NameHeader}[1]{
-  { \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1 \\ }
+  {
+    \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1
+    \vspace{0.25em} \par
+  }
 }
 
 \newcommand{\Email}[1]{
@@ -80,6 +86,6 @@
     \section*{\MakeUppercase{#1}}
     \vspace{-5mm}
     \rule{\textwidth}{0.4pt}
-    \par
+    \vspace{-2mm} \par
   }
 }
