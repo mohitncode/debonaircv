@@ -22,6 +22,7 @@
 
 \newfontfamily\bodyfont{Roboto-Regular}[Path=fonts/]
 \newfontfamily\headerfont{Roboto-Thin}[Path=fonts/]
+\newfontfamily\lightfont{Roboto-Light}[Path=fonts/]
 
 \setmainfont{Roboto-Regular}[Path=fonts/]
 
@@ -59,21 +60,26 @@
 % Template Commands
 % -----------------------------------------------------------
 
+\newcommand{\vsep}{\hspace*{0.3em} | \hspace*{1.0em}}
+
 \newcommand{\NameHeader}[1]{
-  {
-    \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1 \\
-  }
+  { \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1 \\ }
 }
 
 \newcommand{\Email}[1]{
-  {
-    \color{LinkColor} \href{mailto:#1}{#1}
-  }
+  { \color{LinkColor} \href{mailto:#1}{#1} }
 }
 
-\newenvironment{CVSection}[1]{
-  \begin{tabular}{ r p{\textwidth} }
-    \textcolor{HeadingColor}{#1} &
-} {
-  \end{tabular}
+\newcommand{\Contact}[4]{
+  { \lightfont +#1\textendash(#2)\textendash#3\textendash#4 }
+}
+
+\newcommand{\CVSection}[1]{
+  {
+    \color{HeadingColor}
+    \section*{\MakeUppercase{#1}}
+    \vspace{-5mm}
+    \rule{\textwidth}{0.4pt}
+    \par
+  }
 }
