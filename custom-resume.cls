@@ -41,6 +41,9 @@
 % Reduce vertical space between list items to conserve space
 \RequirePackage{enumitem}
 \setlist[itemize]{noitemsep}
+\setlist[itemize]{nolistsep}
+\setlist[enumerate]{noitemsep}
+\setlist[enumerate]{nolistsep}
 
 % Add document metadata
 \RequirePackage{hyperref}
@@ -66,4 +69,11 @@
   {
     \color{LinkColor} \href{mailto:#1}{#1}
   }
+}
+
+\newenvironment{CVSection}[1]{
+  \begin{tabular}{ r p{\textwidth} }
+    \textcolor{HeadingColor}{#1} &
+} {
+  \end{tabular}
 }
