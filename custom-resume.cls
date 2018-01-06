@@ -94,10 +94,16 @@
 }
 
 \newcommand{\Education}[3]{
-  {
-    \boldfont \large #1
-    \hfill #2 \par
-  }
-  { \italicfont #3 }
+  \boldfont \large #1
+  \hfill #2 \par
+  \italicfont #3
+  \newline \par
+}
+
+\newcommand{\Work}[4]{
+  \boldfont \large #1
+  \normalfont \small #3
+  \hfill \boldfont \large #4 \par
+  \italicfont #2
   \newline \par
 }
