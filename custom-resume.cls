@@ -55,7 +55,8 @@
   pdfcreator={Mohit Delhiwala},
   pdfproducer={Mohit Delhiwala},
   pdfkeywords={resume, template, custom},
-  colorlinks=true
+  colorlinks=true,
+  urlcolor=LinkColor
 }
 
 % Disable page numbering
