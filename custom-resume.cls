@@ -23,6 +23,8 @@
 \newfontfamily\bodyfont{Roboto-Regular}[Path=fonts/]
 \newfontfamily\headerfont{Roboto-Thin}[Path=fonts/]
 \newfontfamily\lightfont{Roboto-Light}[Path=fonts/]
+\newfontfamily\boldfont{RobotoCondensed-Bold}[Path=fonts/]
+\newfontfamily\italicfont{Roboto-LightItalic}[Path=fonts/]
 
 \setmainfont{Roboto-Regular}[Path=fonts/]
 
@@ -88,4 +90,13 @@
     \rule{\textwidth}{0.4pt}
     \vspace{-2mm} \par
   }
+}
+
+\newcommand{\Education}[3]{
+  {
+    \boldfont \large #1
+    \hfill #2 \par
+  }
+  { \italicfont #3 }
+  \newline \par
 }

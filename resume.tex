@@ -1,6 +1,9 @@
 \documentclass[]{custom-resume}
+
+\usepackage{multicol}
+
 \begin{document}
-  \NameHeader{Richard Hendricks}
+  \NameHeader{Jane Doe}
   Email:\Email{jane.doe@gmail.com}
   \vsep Mobile:\Contact{1}{123}{456}{7890} \vspace{0.4em}
   % \noindent \textcolor{HeadingColor}{\rule{\textwidth}{1.05pt}}
@@ -10,7 +13,21 @@
   Benchmark distributed architect, user-contributed best-of-breed orchestrate mashups capture grow customized sticky reinvent turn-key; deliver synergies, reinvent. Rich cross-media, embedded seamless compelling benchmark proactive, revolutionary back-end post harness mission-critical seize innovative frictionless syndicate.
 
   \CVSection{Technical Skills}
-  Lorem ipsum dolor
+    \begin{multicols}{3}
+      \begin{itemize}
+        \item Java
+        \item Python
+        \item Microsoft Office
+        \item Linux
+        \item \LaTeX
+        \item Lisp
+        \item HTML
+        \item JavaScript
+        \item NodeJS
+        \item ReactJS
+      \end{itemize}
+    \end{multicols}
+
 
   \CVSection{Work Experience}
   Lorem ipsum dolor
@@ -18,10 +35,23 @@
   \CVSection{Projects}
   Lorem ipsum dolor
 
+
+  % Education section
   \CVSection{Education}
-  Lorem ipsum dolor
+
+    \Education
+    {University of Oklahoma}
+    {2011 \textendash \ 2013}
+    {Masters in Information Technology (3.5 / 4.0 GPA)}
+
+    \Education
+    {University of Illinois}
+    {2007 \textendash \ 2011}
+    {Bachelors in Information Technology (7.0 / 10.0 CGPA)}
+
+  % End education section
 
   \CVSection{References}
-  Lorem ipsum dolor
+    Available upon request
 
 \end{document}
