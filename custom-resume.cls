@@ -59,8 +59,18 @@
   urlcolor=LinkColor
 }
 
-% Load fontawesome package for social icons
+% Load fontawesome package for social icons and apply patch
+% to make them scale
 \RequirePackage{fontawesome}
+\DeclareFontFamily{U}{fontawesome1}{}
+\DeclareFontShape{U}{fontawesome1}{m}{n}{<->FontAwesome--fontawesomeone}{}
+\DeclareFontFamily{U}{fontawesome2}{}
+\DeclareFontShape{U}{fontawesome2}{m}{n}{<->FontAwesome--fontawesometwo}{}
+\DeclareFontFamily{U}{fontawesome3}{}
+\DeclareFontShape{U}{fontawesome3}{m}{n}{<->FontAwesome--fontawesomethree}{}
+\DeclareRobustCommand{\FAone}{\usefont{U}{fontawesome1}{m}{n}}
+\DeclareRobustCommand{\FAtwo}{\usefont{U}{fontawesome2}{m}{n}}
+\DeclareRobustCommand{\FAthree}{\usefont{U}{fontawesome3}{m}{n}}
 
 % Disable page numbering
 \pagenumbering{gobble}
@@ -69,21 +79,23 @@
 % Template Commands
 % -----------------------------------------------------------
 
-\newcommand{\vsep}{\hspace*{0.3em} | \hspace*{1.0em}}
+\newcommand{\vsep}{\hspace*{0.15em} | \hspace*{0.45em}}
 
 \newcommand{\NameHeader}[1]{
   {
     \fontsize{40pt}{65pt} \color{HeadingColor} \headerfont #1
-    \vspace{0.25em} \par
+    \vspace{0.30em} \par
   }
 }
 
 \newcommand{\Email}[1]{
+  { \large \faEnvelopeO \ \ }
   { \color{LinkColor} \href{mailto:#1}{#1} }
 }
 
 \newcommand{\Contact}[4]{
-  { \lightfont +#1\textendash(#2)\textendash#3\textendash#4 }
+  { \large \faPhone \ \ }
+  { \lightfont +#1 (#2) #3 #4 }
 }
 
 \newcommand{\CVSection}[1]{
@@ -112,9 +124,11 @@
 }
 
 \newcommand{\GitHub}[2]{
-  { \faGithub \ \  \href{#2}{#1} }
+  { \Large \faGithub \ \ }
+  { \href{#2}{#1} }
 }
 
 \newcommand{\LinkedIn}[2]{
-  { \faLinkedin \ \  \href{#2}{#1} }
+  { \Large \faLinkedin \ \ }
+  { \href{#2}{#1} }
 }
