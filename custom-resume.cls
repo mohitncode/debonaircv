@@ -12,7 +12,7 @@
 % Page Margins
 % -----------------------------------------------------------
 
-\RequirePackage[left=2.0cm, top=2.0cm, bottom=2.0cm, right=2.0cm, nohead, nofoot]{geometry}
+\RequirePackage[left=2.0cm, top=1.5cm, bottom=1.5cm, right=2.0cm, nohead, nofoot]{geometry}
 
 % -----------------------------------------------------------
 % Fonts
@@ -58,6 +58,9 @@
   colorlinks=true,
   urlcolor=LinkColor
 }
+
+% Load fontawesome package for social icons
+\RequirePackage{fontawesome}
 
 % Disable page numbering
 \pagenumbering{gobble}
@@ -106,4 +109,12 @@
   \hfill \boldfont \large #4 \par
   \italicfont #2
   \newline \par
+}
+
+\newcommand{\GitHub}[2]{
+  { \faGithub \ \  \href{#2}{#1} }
+}
+
+\newcommand{\LinkedIn}[2]{
+  { \faLinkedin \ \  \href{#2}{#1} }
 }
