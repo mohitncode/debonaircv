@@ -1,7 +1,7 @@
 % Author - Mohit Delhiwala
 % Date - 03/01/2018
 
-\ProvidesClass{custom-resume}
+\ProvidesClass{debonaircv}
 \NeedsTeXFormat{LaTeX2e}
 
 \PassOptionsToClass{\CurrentOption}{article}
@@ -131,4 +131,11 @@
 \newcommand{\LinkedIn}[2]{
   { \Large \faLinkedin \ \ }
   { \href{#2}{#1} }
+}
+
+\newcommand{\Project}[3]{
+  \boldfont \large #1
+  \hfill \boldfont \large #2 \par
+  \normalfont \normalsize #3
+  \newline \par
 }
