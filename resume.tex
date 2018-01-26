@@ -3,8 +3,8 @@
 \usepackage{multicol}
 
 \begin{document}
-  \NameHeader{Jane Doe}
-  \Email{jane.doe@gmail.com}
+  \noindent \hspace{-3mm} \NameHeader{Jane Doe}
+  \noindent \hspace{-2mm} \Email{jane.doe@gmail.com}
   \vsep \Contact{1}{123}{456}{7890}
   \vsep \GitHub{janedoe}{https://github.com/janedoe}
   \vsep \LinkedIn{janedoe}{https://www.linkedin.com/janedoe} \vspace{0.4em}
@@ -15,22 +15,13 @@
   Benchmark distributed architect, user-contributed best-of-breed orchestrate mashups capture grow customized sticky reinvent turn-key; deliver synergies, reinvent. Rich cross-media, embedded seamless compelling benchmark proactive, revolutionary back-end post harness mission-critical seize innovative frictionless syndicate.
 
   \CVSection{Technical Skills}
-    \setlength\columnsep{-50mm}
-    \begin{multicols}{3}
-      \begin{itemize}
-        \item Java
-        \item Python
-        \item Microsoft Office
-        \item Linux
-        \item \LaTeX
-        \item Lisp
-        \item HTML
-        \item JavaScript
-        \item NodeJS
-        \item ReactJS
-      \end{itemize}
-    \end{multicols}
-
+    \lightfont \normalsize
+    \begin{tabular}{ll}
+      {\boldfont Languages} & Java, C, C++, JavaScript \\
+      {\boldfont Operating Systems} & Microsoft Windows, Linux, Mac \\
+      {\boldfont Software Tools} & Microsoft Office, Tableau \\
+      {\boldfont Methodologies} & JIRA, Scrum, Agile
+    \end{tabular}
 
   % Work section
   \CVSection{Work Experience}
@@ -55,12 +46,12 @@
     \Education
     {University of Oklahoma}
     {2011 \textendash \ 2013}
-    {Masters in Information Technology (3.5 / 4.0 GPA)}
+    {Masters in Information Technology \small (3.5 / 4.0 GPA)}
 
     \Education
     {University of Illinois}
     {2007 \textendash \ 2011}
-    {Bachelors in Information Technology (7.0 / 10.0 CGPA)}
+    {Bachelors in Information Technology \small (7.0 / 10.0 CGPA)}
 
   % End education section
 
